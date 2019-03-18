@@ -1,1 +1,3 @@
-# project-lvl1-s462
+# Brain Games
+
+Brain Games - training project from Hexlet
