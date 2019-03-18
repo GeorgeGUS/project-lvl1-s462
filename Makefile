@@ -5,7 +5,7 @@ start:
 	npx babel-node src/bin/brain-games.js
 
 lint:
-	npx eslint *.js
+	npx eslint .
 
 publish:
 	npm publish
