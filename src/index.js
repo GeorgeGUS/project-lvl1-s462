@@ -7,7 +7,6 @@ const gameRules = {
 };
 
 export const getRandomNum = (min = 0, max = 100) => Math.round(Math.random() * (max - min)) + min;
-export const isEven = num => num % 2 === 0;
 
 export const greeting = () => {
   console.log('Welcome to the Brain Games!');

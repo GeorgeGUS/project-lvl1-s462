@@ -1,4 +1,6 @@
-import { getRandomNum, isEven, generateGame } from '..';
+import { getRandomNum, generateGame } from '..';
+
+const isEven = num => num % 2 === 0;
 
 export default () => {
   const data = () => {
