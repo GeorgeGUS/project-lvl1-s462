@@ -1,13 +1,12 @@
 import readlineSync from 'readline-sync';
 
-const maxRandomNumber = 100;
 const numOfQuestions = 3;
 const gameRules = {
   even: 'Answer "yes" if number even otherwise answer "no".',
   calc: 'What is the result of the expression?',
 };
 
-const getRandomNum = () => Math.round(Math.random() * maxRandomNumber);
+const getRandomNum = (min = 0, max = 100) => Math.round(Math.random() * (max - min)) + min;
 const isEven = num => num % 2 === 0;
 
 const greeting = () => {
@@ -20,14 +19,13 @@ const getUsername = () => {
   return username;
 };
 
-const generateGame = (rules, getQuestion, getCorrectAnswer) => {
+const generateGame = (rules, generateData) => {
   greeting();
   console.log(rules);
   const username = getUsername();
 
   for (let i = 0; i < numOfQuestions; i += 1) {
-    const question = getQuestion();
-    const correctAnswer = getCorrectAnswer(question);
+    const { question, correctAnswer } = generateData();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {
@@ -50,8 +48,33 @@ export const startGame = () => {
 };
 
 export const guessEven = () => {
-  const question = () => getRandomNum();
-  const correctAnswer = q => (isEven(q) ? 'yes' : 'no');
+  const data = () => {
+    const num = getRandomNum();
+    return {
+      question: num,
+      correctAnswer: isEven(num) ? 'yes' : 'no',
+    };
+  };
+  generateGame(gameRules.even, data);
+};
 
-  generateGame(gameRules.even, question, correctAnswer);
+const operations = {
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
+};
+const operators = Object.keys(operations);
+const operatorsLastIndex = operators.length - 1;
+
+export const calcResult = () => {
+  const data = () => {
+    const numA = getRandomNum();
+    const numB = getRandomNum();
+    const operator = operators[getRandomNum(0, operatorsLastIndex)];
+    return {
+      question: `${numA} ${operator} ${numB}`,
+      correctAnswer: `${operations[operator](numA, numB)}`,
+    };
+  };
+  generateGame(gameRules.calc, data);
 };
