@@ -11,8 +11,17 @@ Brain Games - training project from Hexlet. This is a set of mini-games that run
 $ npm i -g braingames-s462
 ```
 
-## Start
+## Greeting
 
 ```sh
 $ brain-games
 ```
+
+## Choose even/odd
+
+```sh
+$ brain-even
+```
+
+Example:
+[![asciicast](https://asciinema.org/a/zcAZNWTFM5Iz1YglnztU7UqWW.svg)](https://asciinema.org/a/zcAZNWTFM5Iz1YglnztU7UqWW)
