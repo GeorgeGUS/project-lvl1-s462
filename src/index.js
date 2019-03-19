@@ -13,6 +13,7 @@ export const getUsername = () => {
 const maxRandomNumber = 100;
 const numOfQuestions = 3;
 
+const getRandomNum = () => Math.round(Math.random() * maxRandomNumber);
 const isEven = num => num % 2 === 0;
 
 export const guessEven = () => {
@@ -21,7 +22,7 @@ export const guessEven = () => {
   const username = getUsername();
 
   for (let i = 0; i < numOfQuestions; i += 1) {
-    const question = Math.round(Math.random() * maxRandomNumber);
+    const question = getRandomNum();
     const correctAnswer = isEven(question) ? 'yes' : 'no';
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
