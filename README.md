@@ -24,6 +24,7 @@ $ brain-even
 ```
 
 Example:
+
 [![asciicast](https://asciinema.org/a/7ZUoQzWJaZHzcqNT38YZIaQqx.svg)](https://asciinema.org/a/7ZUoQzWJaZHzcqNT38YZIaQqx?t=4)
 
 ## Calculator
@@ -32,4 +33,11 @@ Example:
 $ brain-calc
 ```
 Example:
+
 [![asciicast](https://asciinema.org/a/gh1bhQkyG6OW7RRUAwIyRYMWZ.svg)](https://asciinema.org/a/gh1bhQkyG6OW7RRUAwIyRYMWZ?t=4)
+
+## Greatest common divisor
+
+```sh
+$ brain-gcd
+```
