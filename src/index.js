@@ -10,22 +10,28 @@ export const getUsername = () => {
   return username;
 };
 
-export const guessEven = (username) => {
-  const MAX_NUMBER = 100;
-  let QUESTION_COUNT = 3;
+const maxRandomNumber = 100;
+const numOfQuestions = 3;
 
-  while (QUESTION_COUNT > 0) {
-    const question = Math.round(Math.random() * MAX_NUMBER);
-    const correctAnswer = question % 2 === 0 ? 'yes' : 'no';
+const isEven = num => num % 2 === 0;
+
+export const guessEven = () => {
+  greeting();
+  console.log('Answer "yes" if number even otherwise answer "no".');
+  const username = getUsername();
+
+  for (let i = 0; i < numOfQuestions; i += 1) {
+    const question = Math.round(Math.random() * maxRandomNumber);
+    const correctAnswer = isEven(question) ? 'yes' : 'no';
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
-      QUESTION_COUNT -= 1;
     } else {
       console.log(
-        `"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${username}!`,
+        `"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`,
       );
+      console.log(`Let's try again, ${username}!`);
       return;
     }
   }
