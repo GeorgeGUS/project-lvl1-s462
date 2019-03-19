@@ -3,6 +3,7 @@ import { getRandomNum, generateGame } from '..';
 const isEven = num => num % 2 === 0;
 
 export default () => {
+  const rules = 'Answer "yes" if number even otherwise answer "no".';
   const data = () => {
     const num = getRandomNum();
     return {
@@ -10,5 +11,5 @@ export default () => {
       correctAnswer: isEven(num) ? 'yes' : 'no',
     };
   };
-  generateGame('even', data);
+  generateGame(rules, data);
 };

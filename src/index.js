@@ -1,10 +1,6 @@
 import readlineSync from 'readline-sync';
 
 const numOfQuestions = 3;
-const gameRules = {
-  even: 'Answer "yes" if number even otherwise answer "no".',
-  calc: 'What is the result of the expression?',
-};
 
 export const getRandomNum = (min = 0, max = 100) => Math.round(Math.random() * (max - min)) + min;
 
@@ -18,9 +14,9 @@ export const getUsername = () => {
   return username;
 };
 
-export const generateGame = (gameName, generateData) => {
+export const generateGame = (gameRules, generateData) => {
   greeting();
-  console.log(gameRules[gameName]);
+  console.log(gameRules);
   const username = getUsername();
 
   for (let i = 0; i < numOfQuestions; i += 1) {

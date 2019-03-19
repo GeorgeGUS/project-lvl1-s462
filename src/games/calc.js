@@ -9,6 +9,7 @@ export default () => {
   const operators = Object.keys(operations);
   const operatorsLastIndex = operators.length - 1;
 
+  const rules = 'What is the result of the expression?';
   const data = () => {
     const numA = getRandomNum();
     const numB = getRandomNum();
@@ -18,5 +19,5 @@ export default () => {
       correctAnswer: `${operations[operator](numA, numB)}`,
     };
   };
-  generateGame('calc', data);
+  generateGame(rules, data);
 };
