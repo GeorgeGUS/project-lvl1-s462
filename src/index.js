@@ -1,20 +1,25 @@
 import readlineSync from 'readline-sync';
 
-export const greeting = () => {
-  console.log('Welcome to the Brain Games!');
-};
-
-export const getUsername = () => {
-  const username = readlineSync.question('\nMay I have your name? ');
-  console.log(`Hello, ${username}!\n`);
-  return username;
-};
-
 const maxRandomNumber = 100;
 const numOfQuestions = 3;
 
 const getRandomNum = () => Math.round(Math.random() * maxRandomNumber);
 const isEven = num => num % 2 === 0;
+
+const greeting = () => {
+  console.log('Welcome to the Brain Games!');
+};
+
+const getUsername = () => {
+  const username = readlineSync.question('\nMay I have your name? ');
+  console.log(`Hello, ${username}!\n`);
+  return username;
+};
+
+export const startGame = () => {
+  greeting();
+  getUsername();
+};
 
 export const guessEven = () => {
   greeting();
