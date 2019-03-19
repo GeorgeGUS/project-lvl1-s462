@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { calcResult } from '..';
+import { startBrainCalc } from '..';
 
-calcResult();
+startBrainCalc();

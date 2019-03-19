@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { guessEven } from '..';
+import { startBrainEven } from '..';
 
-guessEven();
+startBrainEven();

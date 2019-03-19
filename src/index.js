@@ -42,12 +42,12 @@ const generateGame = (rules, generateData) => {
   console.log(`Congratulations, ${username}!`);
 };
 
-export const startGame = () => {
+export const startBrainGames = () => {
   greeting();
   getUsername();
 };
 
-export const guessEven = () => {
+export const startBrainEven = () => {
   const data = () => {
     const num = getRandomNum();
     return {
@@ -66,7 +66,7 @@ const operations = {
 const operators = Object.keys(operations);
 const operatorsLastIndex = operators.length - 1;
 
-export const calcResult = () => {
+export const startBrainCalc = () => {
   const data = () => {
     const numA = getRandomNum();
     const numB = getRandomNum();
