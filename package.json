@@ -1,6 +1,6 @@
 {
   "name": "braingames-s462",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Brain Games - mini-games in the console",
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",

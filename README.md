@@ -41,3 +41,6 @@ Example:
 ```sh
 $ brain-gcd
 ```
+Example:
+
+[![asciicast](https://asciinema.org/a/B3GjsqTKHRZKCQwmDa9tbAV36.svg)](https://asciinema.org/a/B3GjsqTKHRZKCQwmDa9tbAV36)
