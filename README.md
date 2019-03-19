@@ -24,4 +24,4 @@ $ brain-even
 ```
 
 Example:
-[![asciicast](https://asciinema.org/a/zcAZNWTFM5Iz1YglnztU7UqWW.svg)](https://asciinema.org/a/zcAZNWTFM5Iz1YglnztU7UqWW)
+[![asciicast](https://asciinema.org/a/zcAZNWTFM5Iz1YglnztU7UqWW.svg)](https://asciinema.org/a/zcAZNWTFM5Iz1YglnztU7UqWW?t=7)
