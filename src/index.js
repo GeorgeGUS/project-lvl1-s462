@@ -2,6 +2,10 @@ import readlineSync from 'readline-sync';
 
 const maxRandomNumber = 100;
 const numOfQuestions = 3;
+const gameRules = {
+  even: 'Answer "yes" if number even otherwise answer "no".',
+  calc: 'What is the result of the expression?',
+};
 
 const getRandomNum = () => Math.round(Math.random() * maxRandomNumber);
 const isEven = num => num % 2 === 0;
@@ -16,19 +20,14 @@ const getUsername = () => {
   return username;
 };
 
-export const startGame = () => {
+const generateGame = (rules, getQuestion, getCorrectAnswer) => {
   greeting();
-  getUsername();
-};
-
-export const guessEven = () => {
-  greeting();
-  console.log('Answer "yes" if number even otherwise answer "no".');
+  console.log(rules);
   const username = getUsername();
 
   for (let i = 0; i < numOfQuestions; i += 1) {
-    const question = getRandomNum();
-    const correctAnswer = isEven(question) ? 'yes' : 'no';
+    const question = getQuestion();
+    const correctAnswer = getCorrectAnswer(question);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {
@@ -43,4 +42,16 @@ export const guessEven = () => {
   }
 
   console.log(`Congratulations, ${username}!`);
+};
+
+export const startGame = () => {
+  greeting();
+  getUsername();
+};
+
+export const guessEven = () => {
+  const question = () => getRandomNum();
+  const correctAnswer = q => (isEven(q) ? 'yes' : 'no');
+
+  generateGame(gameRules.even, question, correctAnswer);
 };
