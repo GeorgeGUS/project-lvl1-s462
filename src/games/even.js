@@ -5,7 +5,7 @@ const isEven = num => num % 2 === 0;
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 const generateData = () => {
-  const num = getRandomNum();
+  const num = getRandomNum(0, 100);
   return {
     question: num,
     correctAnswer: isEven(num) ? 'yes' : 'no',
