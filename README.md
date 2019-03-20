@@ -58,6 +58,7 @@ Example:
 
 ```sh
 $ brain-prime
+```
 Example:
 
 [![asciicast](https://asciinema.org/a/vqlDz8J8ZTZqXN5QunMgqxtxj.svg)](https://asciinema.org/a/vqlDz8J8ZTZqXN5QunMgqxtxj?t=5)
