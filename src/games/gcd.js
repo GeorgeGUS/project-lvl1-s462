@@ -10,16 +10,17 @@ const calculateGCD = (numA, numB) => {
   return a;
 };
 
-export default () => {
-  const rules = 'Find the greatest common divisor of given numbers.';
-  const data = () => {
-    const numA = getRandomNum();
-    const numB = getRandomNum();
-    const gcd = calculateGCD(numA, numB);
-    return {
-      question: `${numA} ${numB}`,
-      correctAnswer: `${gcd}`,
-    };
+const description = 'Find the greatest common divisor of given numbers.';
+const generateData = () => {
+  const numA = getRandomNum();
+  const numB = getRandomNum();
+  const gcd = calculateGCD(numA, numB);
+  return {
+    question: `${numA} ${numB}`,
+    correctAnswer: `${gcd}`,
   };
-  generateGame(rules, data);
+};
+
+export default () => {
+  generateGame(description, generateData);
 };

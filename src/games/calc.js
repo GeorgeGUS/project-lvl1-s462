@@ -1,23 +1,24 @@
 import { getRandomNum, generateGame } from '..';
 
-export default () => {
-  const operations = {
-    '+': (a, b) => a + b,
-    '-': (a, b) => a - b,
-    '*': (a, b) => a * b,
-  };
-  const operators = Object.keys(operations);
-  const operatorsLastIndex = operators.length - 1;
+const operations = {
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
+};
+const operators = Object.keys(operations);
+const operatorsLastIndex = operators.length - 1;
 
-  const rules = 'What is the result of the expression?';
-  const data = () => {
-    const numA = getRandomNum();
-    const numB = getRandomNum();
-    const operator = operators[getRandomNum(0, operatorsLastIndex)];
-    return {
-      question: `${numA} ${operator} ${numB}`,
-      correctAnswer: `${operations[operator](numA, numB)}`,
-    };
+const description = 'What is the result of the expression?';
+const generateData = () => {
+  const numA = getRandomNum();
+  const numB = getRandomNum();
+  const operator = operators[getRandomNum(0, operatorsLastIndex)];
+  return {
+    question: `${numA} ${operator} ${numB}`,
+    correctAnswer: `${operations[operator](numA, numB)}`,
   };
-  generateGame(rules, data);
+};
+
+export default () => {
+  generateGame(description, generateData);
 };

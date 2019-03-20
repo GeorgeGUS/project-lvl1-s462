@@ -1,6 +1,5 @@
-import { greeting, getUsername } from '..';
+import { generateGame } from '..';
 
 export default () => {
-  greeting();
-  getUsername();
+  generateGame();
 };
