@@ -15,7 +15,7 @@ const generateData = () => {
   const gcd = calculateGCD(numA, numB);
   return {
     question: `${numA} ${numB}`,
-    correctAnswer: `${gcd}`,
+    correctAnswer: gcd,
   };
 };
 

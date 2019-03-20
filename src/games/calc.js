@@ -16,7 +16,7 @@ const generateData = () => {
   const operator = operators[getRandomNum(0, operatorsLastIndex)];
   return {
     question: `${numA} ${operator} ${numB}`,
-    correctAnswer: `${operations[operator](numA, numB)}`,
+    correctAnswer: operations[operator](numA, numB),
   };
 };
 
