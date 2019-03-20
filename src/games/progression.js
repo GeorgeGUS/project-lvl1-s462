@@ -22,6 +22,4 @@ const generateData = () => {
   return { question, correctAnswer };
 };
 
-export default () => {
-  generateGame(description, generateData);
-};
+export default () => generateGame(description, generateData);

@@ -12,6 +12,4 @@ const generateData = () => {
   };
 };
 
-export default () => {
-  generateGame(description, generateData);
-};
+export default () => generateGame(description, generateData);
