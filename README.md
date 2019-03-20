@@ -50,3 +50,6 @@ Example:
 ```sh
 $ brain-progression
 ```
+Example:
+
+[![asciicast](https://asciinema.org/a/43tRNKaYZrt7xYt2TGOnuRE3X.svg)](https://asciinema.org/a/43tRNKaYZrt7xYt2TGOnuRE3X?t=5)
