@@ -3,6 +3,7 @@ import { getRandomNum, generateGame } from '..';
 const calculateGCD = (numA, numB) => {
   let [a, b] = [numA, numB];
   // Euclid algorithm
+  // Link to source: https://younglinux.info/algorithm/euclidean
   while (b !== 0) {
     [a, b] = [b, a % b];
   }
