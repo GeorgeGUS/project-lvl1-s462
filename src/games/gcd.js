@@ -1,14 +1,11 @@
 import { getRandomNum } from '../utils';
 import generateGame from '..';
 
-const calculateGCD = (numA, numB) => {
-  let [a, b] = [numA, numB];
-  // Euclid algorithm
-  // Link to source: https://younglinux.info/algorithm/euclidean
-  while (b !== 0) {
-    [a, b] = [b, a % b];
+const calculateGCD = (a, b) => {
+  if (b === 0) {
+    return a;
   }
-  return a;
+  return calculateGCD(b, a % b);
 };
 
 const description = 'Find the greatest common divisor of given numbers.';
