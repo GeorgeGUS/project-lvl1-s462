@@ -1,4 +1,4 @@
-import { generateGame } from '..';
+import generateGame from '..';
 
 export default () => {
   generateGame();

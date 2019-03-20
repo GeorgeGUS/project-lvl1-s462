@@ -1,4 +1,5 @@
-import { getRandomNum, generateGame } from '..';
+import { getRandomNum } from '../utils';
+import generateGame from '..';
 
 const operations = {
   '+': (a, b) => a + b,
