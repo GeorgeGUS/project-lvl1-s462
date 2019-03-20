@@ -17,7 +17,7 @@ $ npm i -g braingames-s462
 $ brain-games
 ```
 
-## Choose even/odd
+## Is number even or odd?
 
 ```sh
 $ brain-even
@@ -53,3 +53,9 @@ $ brain-progression
 Example:
 
 [![asciicast](https://asciinema.org/a/43tRNKaYZrt7xYt2TGOnuRE3X.svg)](https://asciinema.org/a/43tRNKaYZrt7xYt2TGOnuRE3X?t=5)
+
+## Is it prime number?
+
+```sh
+$ brain-progression
+```
