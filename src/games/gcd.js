@@ -1,6 +1,6 @@
 import { getRandomNum, generateGame } from '..';
 
-const calculateGCD = (numA, numB = 0) => {
+const calculateGCD = (numA, numB) => {
   let [a, b] = [numA, numB];
   // Euclid algorithm
   while (b !== 0) {
