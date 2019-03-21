@@ -11,13 +11,9 @@ Brain Games - training project from Hexlet. This is a set of mini-games that run
 $ npm i -g braingames-s462
 ```
 
-## Greeting
+## Games
 
-```sh
-$ brain-games
-```
-
-## Is number even or odd?
+### Is number even or odd?
 
 ```sh
 $ brain-even
@@ -27,7 +23,7 @@ Example:
 
 [![asciicast](https://asciinema.org/a/7ZUoQzWJaZHzcqNT38YZIaQqx.svg)](https://asciinema.org/a/7ZUoQzWJaZHzcqNT38YZIaQqx?t=4)
 
-## Calculator
+### Calculator
 
 ```sh
 $ brain-calc
@@ -36,7 +32,7 @@ Example:
 
 [![asciicast](https://asciinema.org/a/gh1bhQkyG6OW7RRUAwIyRYMWZ.svg)](https://asciinema.org/a/gh1bhQkyG6OW7RRUAwIyRYMWZ?t=4)
 
-## Greatest common divisor
+### Greatest common divisor
 
 ```sh
 $ brain-gcd
@@ -45,7 +41,7 @@ Example:
 
 [![asciicast](https://asciinema.org/a/B3GjsqTKHRZKCQwmDa9tbAV36.svg)](https://asciinema.org/a/B3GjsqTKHRZKCQwmDa9tbAV36?t=7)
 
-## Arithmetic progression
+### Arithmetic progression
 
 ```sh
 $ brain-progression
@@ -54,7 +50,7 @@ Example:
 
 [![asciicast](https://asciinema.org/a/43tRNKaYZrt7xYt2TGOnuRE3X.svg)](https://asciinema.org/a/43tRNKaYZrt7xYt2TGOnuRE3X?t=5)
 
-## Is it prime number?
+### Is it prime number?
 
 ```sh
 $ brain-prime
