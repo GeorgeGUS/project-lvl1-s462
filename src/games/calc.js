@@ -15,7 +15,7 @@ const generateData = () => {
   const numB = getRandomNum(0, 100);
   const operator = operators[getRandomNum(0, operatorsLastIndex)];
   const question = `${numA} ${operator} ${numB}`;
-  const correctAnswer = operations[operator](numA, numB);
+  const correctAnswer = operations[operator](numA, numB).toString();
   return { question, correctAnswer };
 };
 

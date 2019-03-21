@@ -13,7 +13,7 @@ const generateData = () => {
   const numA = getRandomNum(0, 100);
   const numB = getRandomNum(0, 100);
   const question = `${numA} ${numB}`;
-  const correctAnswer = calculateGCD(numA, numB);
+  const correctAnswer = calculateGCD(numA, numB).toString();
   return { question, correctAnswer };
 };
 

@@ -17,7 +17,7 @@ const description = 'What number is missing in the progression?';
 const generateData = () => {
   const progression = generateProgression();
   const hiddenNumIndex = getRandomNum(0, length - 1);
-  const correctAnswer = progression.splice(hiddenNumIndex, 1, '..');
+  const correctAnswer = progression.splice(hiddenNumIndex, 1, '..').toString();
   const question = progression.join(' ');
   return { question, correctAnswer };
 };
