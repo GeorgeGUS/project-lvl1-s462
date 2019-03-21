@@ -14,10 +14,9 @@ const generateData = () => {
   const numA = getRandomNum(0, 100);
   const numB = getRandomNum(0, 100);
   const operator = operators[getRandomNum(0, operatorsLastIndex)];
-  return {
-    question: `${numA} ${operator} ${numB}`,
-    correctAnswer: operations[operator](numA, numB),
-  };
+  const question = `${numA} ${operator} ${numB}`;
+  const correctAnswer = operations[operator](numA, numB);
+  return { question, correctAnswer };
 };
 
 export default () => generateGame(description, generateData);
