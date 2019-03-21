@@ -1,4 +1,4 @@
-import { getRandomNum } from '../utils';
+import getRandomNum from '../utils';
 import generateGame from '..';
 
 const isEven = num => num % 2 === 0;
