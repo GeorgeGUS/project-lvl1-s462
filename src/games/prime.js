@@ -2,7 +2,8 @@ import { getRandomNum } from '../utils';
 import generateGame from '..';
 
 const isPrime = (num) => {
-  for (let i = 2; i < num; i += 1) {
+  const half = num / 2;
+  for (let i = 2; i <= half; i += 1) {
     if (num % i === 0) {
       return false;
     }
