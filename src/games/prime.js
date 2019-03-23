@@ -1,4 +1,4 @@
-import getRandomNum from '../utils';
+import { generateDataByFunction } from '../utils';
 import generateGame from '..';
 
 const isPrime = (num) => {
@@ -12,10 +12,6 @@ const isPrime = (num) => {
 };
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const generateData = () => {
-  const question = getRandomNum(0, 100);
-  const correctAnswer = isPrime(question) ? 'yes' : 'no';
-  return { question, correctAnswer };
-};
+const generateData = () => generateDataByFunction(isPrime);
 
 export default () => generateGame(description, generateData);
