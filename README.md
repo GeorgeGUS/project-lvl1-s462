@@ -2,8 +2,9 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/8fcda763ad8b57059c76/maintainability)](https://codeclimate.com/github/GeorgeGUS/project-lvl1-s462/maintainability)
 [![Build Status](https://travis-ci.com/GeorgeGUS/project-lvl1-s462.svg?branch=master)](https://travis-ci.com/GeorgeGUS/project-lvl1-s462)
+[![npm version](https://badge.fury.io/js/braingames-s462.svg)](https://badge.fury.io/js/braingames-s462)
 
-Brain Games - training project from Hexlet. This is a set of mini-games that run in the console.
+Brain Games is training project from Hexlet. This is a set of mini-games that runs in the console. Install them in the global area or in whatever folder you like (remove `-g`), enter the name of the game and have fun! ;)
 
 ## Installation
 
