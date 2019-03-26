@@ -2,8 +2,8 @@ import { generateDataByFunction } from '../utils';
 import generateGame from '..';
 
 const isPrime = (num) => {
-  const half = num / 2;
-  for (let i = 2; i <= half; i += 1) {
+  const sqrt = Math.sqrt(num);
+  for (let i = 2; i <= sqrt; i += 1) {
     if (num % i === 0) {
       return false;
     }
